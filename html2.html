@@ -1,6 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
+      <style>
+
+
+ @media (max-width: 1200px) {
+  body::before,
+  body::after {
+    display: none; 
+  }
+
+    iframe {
+      height: 300px; 
+    }
+
+    h1 {
+      font-size: 2em; 
+    }
+  }
+    h3{
+      color:red;
+    }
+    .w3-text-container {
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .w3-text-container.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .w3-main {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+
+    .w3-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Raleway", sans-serif;
+    }
+
+    body {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    
+    @keyframes spin {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 80px; 
+      }
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50px;
+      background: repeating-linear-gradient(
+        -45deg,
+        #007bff,
+        #007bff 10px,
+        #ffffff 10px,
+        #ffffff 20px
+      );
+      animation: spin 5s linear infinite; 
+    }
+
+    body::before {
+      left: 0;
+    }
+
+    body::after {
+      right: 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 15px;
+      color: #ffffff;
+      background: #007bff;
+      border-radius: 10px;
+    }
+
+    .w3-container img {
+      border: 5px solid transparent;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .w3-container img:hover {
+      transform: scale(1.05);
+      border-color: #007bff;
+    }
+  </style>
     <title>formas kopā</title>
 </head>
 <body>
