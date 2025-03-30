@@ -6,68 +6,38 @@
     <title>Gaidot dzimšanas dienu</title>
 </head>
 <body>
-    <!-- Virsraksts -->
     <h1>Gaidot dzimšanas dienu..</h1>
-
-    <!-- Horizontālā līnija -->
     <hr>
-
-    <!-- Forma -->
-    <form action="/submit" method="post">
-        <!-- Teksts par datuma ievadi -->
+    <form>
         <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena:</p>
-        
-        <!-- Teksts un lauks "gads" -->
         <label for="gads">Gads:</label>
-        <input type="text" id="gads" name="gads" required>
-        <br><br>
-
-        <!-- Teksts un lauks "mēnesis" -->
+        <input type="text" id="gads" name="gads"><br><br>
         <label for="menesis">Mēnesis:</label>
-        <input type="text" id="menesis" name="menesis" required>
-        <br><br>
-
-        <!-- Teksts un lauks "diena" -->
+        <input type="text" id="menesis" name="menesis"><br><br>
         <label for="datums">Diena:</label>
-        <input type="text" id="datums" name="datums" required>
-        <br><br>
-
-        <!-- Pogas ievade -->
-        <button type="button" id="poga" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="dienas();">
-            Aprēķināt dienu skaitu līdz dzimšanas dienai
-        </button>
-        <br><br>
-
-        <!-- Rezultāta ievade -->
-        <p>Līdz svētkiem atlikušas</p>
-        <input type="text" id="dienas" name="dienas" readonly>
-        <p>dienas : ))</p>
+        <input type="text" id="datums" name="datums"><br><br>
+        <button type="button" id="poga" onclick="dienas()">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
     </form>
+    <p>Līdz svētkiem atlikušas <input type="text" id="dienas" name="dienas"> dienas : ))</p>
 
-    <!-- JavaScript funkcija -->
     <script>
         function dienas() {
-            // Iegūt ievades vērtības
-            let gads = document.getElementById('gads').value;
-            let menesis = document.getElementById('menesis').value - 1; // Mēnesis JavaScript sākas no 0
-            let diena = document.getElementById('datums').value;
+            const gads = document.getElementById("gads").value;
+            const menesis = document.getElementById("menesis").value - 1; // Mēneši sākas no 0.
+            const datums = document.getElementById("datums").value;
 
-            // Izveidot ievadītās dzimšanas dienas datumu
-            let dzimsanasDiena = new Date(gads, menesis, diena);
+            const birthday = new Date(gads, menesis, datums);
+            const today = new Date();
 
-            // Šodienas datums
-            let sodien = new Date();
-
-            // Pārbaudīt, vai dzimšanas diena ir šogad vai nākamgad
-            if (dzimsanasDiena < sodien) {
-                dzimsanasDiena.setFullYear(sodien.getFullYear() + 1);
+            birthday.setFullYear(today.getFullYear());
+            if (today > birthday) {
+                birthday.setFullYear(today.getFullYear() + 1);
             }
 
-            // Aprēķināt atlikušās dienas
-            let atlikusasDienas = Math.ceil((dzimsanasDiena - sodien) / (1000 * 60 * 60 * 24));
+            const difference = birthday - today;
+            const daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
 
-            // Ievietot rezultātu
-            document.getElementById('dienas').value = atlikusasDienas;
+            document.getElementById("dienas").value = daysLeft;
         }
     </script>
 </body>
