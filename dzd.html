@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DZD</title>
+    <title>Gaidot dzimšanas dienu</title>
 </head>
 <body>
     <!-- Virsraksts -->
@@ -14,18 +14,20 @@
 
     <!-- Forma -->
     <form action="/submit" method="post">
-        <label for="name">Vārds:</label>
-        <input type="text" id="name" name="name" required>
-        <br><br>
+        <!-- Teksts par datuma ievadi -->
+        <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena:</p>
         
-        <label for="email">E-pasts:</label>
-        <input type="email" id="email" name="email" required>
+        <!-- Teksts un lauks "gads" -->
+        <label for="gads">Gads:</label>
+        <input type="text" id="gads" name="gads" required>
         <br><br>
-        
-        <label for="dob">Dzimšanas datums:</label>
-        <input type="date" id="dob" name="dob" required>
+
+        <!-- Teksts un lauks "mēnesis" -->
+        <label for="menesis">Mēnesis:</label>
+        <input type="text" id="menesis" name="menesis" required>
         <br><br>
-        
+
+        <!-- Submit poga -->
         <button type="submit">Iesniegt</button>
     </form>
 </body>
