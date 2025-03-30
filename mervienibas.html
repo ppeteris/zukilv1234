@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informācijas daudzuma mērvienības</title>
     <script>
-        function convertUnits() {
+        function convertToMB() {
             let gb = parseFloat(document.getElementById("gbInput").value);
             if (!isNaN(gb)) {
                 document.getElementById("mbOutput").value = gb * 1000;
-                document.getElementById("mibOutput").value = gb * 1024;
+                document.getElementById("mibOutput").value = "";
+            }
+        }
+        
+        function convertToMiB() {
+            let gb = parseFloat(document.getElementById("gbInput").value);
+            if (!isNaN(gb)) {
+                document.getElementById("mibOutput").value = gb * 953.674;
+                document.getElementById("mbOutput").value = "";
             }
         }
     </script>
@@ -29,11 +37,11 @@
                 <input type="text" id="gbInput" value="2"> GB =
             </p>
             <p>
-                <button type="button" onclick="convertUnits()">Izteikt megabaitos</button>
+                <button type="button" onclick="convertToMB()">Izteikt megabaitos</button>
                 <input type="text" id="mbOutput"> MB
             </p>
             <p>
-                <button type="button" onclick="convertUnits()">Izteikt mibibaitos</button>
+                <button type="button" onclick="convertToMiB()">Izteikt mibibaitos</button>
                 <input type="text" id="mibOutput"> MiB
             </p>
         </form>
