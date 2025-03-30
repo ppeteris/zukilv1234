@@ -14,25 +14,29 @@
         }
     </script>
     <style>
-        body {
+        .form-container {
             background-color: yellow;
+            padding: 20px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
     <h1>Informācijas daudzuma mērvienības</h1>
-    <form>
-        <p>
-            <input type="text" id="gbInput" value="2"> GB =
-        </p>
-        <p>
-            <button type="button" onclick="convertUnits()">Izteikt megabaitos</button>
-            <input type="text" id="mbOutput"> MB
-        </p>
-        <p>
-            <button type="button" onclick="convertUnits()">Izteikt mibibaitos</button>
-            <input type="text" id="mibOutput"> MiB
-        </p>
-    </form>
+    <div class="form-container">
+        <form>
+            <p>
+                <input type="text" id="gbInput" value="2"> GB =
+            </p>
+            <p>
+                <button type="button" onclick="convertUnits()">Izteikt megabaitos</button>
+                <input type="text" id="mbOutput"> MB
+            </p>
+            <p>
+                <button type="button" onclick="convertUnits()">Izteikt mibibaitos</button>
+                <input type="text" id="mibOutput"> MiB
+            </p>
+        </form>
+    </div>
 </body>
 </html>
