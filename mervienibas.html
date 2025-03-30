@@ -22,10 +22,16 @@
         }
     </script>
     <style>
+        body {
+            background-image: url('images/cipari.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+        }
         .form-container {
-            background-color: yellow;
+            background-color: rgb(220, 220, 0);
             padding: 20px;
             display: inline-block;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -34,7 +40,7 @@
     <div class="form-container">
         <form>
             <p>
-                <input type="text" id="gbInput" > GB =
+                <input type="text" id="gbInput"> GB =
             </p>
             <p>
                 <button type="button" onclick="convertToMB()">Izteikt megabaitos</button>
