@@ -32,8 +32,43 @@
         <input type="text" id="datums" name="datums" required>
         <br><br>
 
-        <!-- Submit poga -->
-        <button type="submit">Iesniegt</button>
+        <!-- Pogas ievade -->
+        <button type="button" id="poga" name="poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="dienas();">
+            Aprēķināt dienu skaitu līdz dzimšanas dienai
+        </button>
+        <br><br>
+
+        <!-- Rezultāta ievade -->
+        <p>Līdz svētkiem atlikušas</p>
+        <input type="text" id="dienas" name="dienas" readonly>
+        <p>dienas : ))</p>
     </form>
+
+    <!-- JavaScript funkcija -->
+    <script>
+        function dienas() {
+            // Iegūt ievades vērtības
+            let gads = document.getElementById('gads').value;
+            let menesis = document.getElementById('menesis').value - 1; // Mēnesis JavaScript sākas no 0
+            let diena = document.getElementById('datums').value;
+
+            // Izveidot ievadītās dzimšanas dienas datumu
+            let dzimsanasDiena = new Date(gads, menesis, diena);
+
+            // Šodienas datums
+            let sodien = new Date();
+
+            // Pārbaudīt, vai dzimšanas diena ir šogad vai nākamgad
+            if (dzimsanasDiena < sodien) {
+                dzimsanasDiena.setFullYear(sodien.getFullYear() + 1);
+            }
+
+            // Aprēķināt atlikušās dienas
+            let atlikusasDienas = Math.ceil((dzimsanasDiena - sodien) / (1000 * 60 * 60 * 24));
+
+            // Ievietot rezultātu
+            document.getElementById('dienas').value = atlikusasDienas;
+        }
+    </script>
 </body>
 </html>
