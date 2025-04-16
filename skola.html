@@ -1,202 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
-<title>CSS Template</title>
-<button onclick="window.location.href='html2.html';">Go to HTML2</button>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-
-section {
-  display: -webkit-flex;
-  display: flex;
-}
-
-
-nav {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    background: url('images/skola.jpg') repeat center center;
-    background-size: contain;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-
-article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  background-color: #ccc;
-  padding: 10px;
-}
-
-
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-
-@media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-}
-</style>
+  <title>Rīgas Valsts 1. ģimnāzija</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header – satur tikai skolas nosaukumu */
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+    
+    /* Flexbox konteiners */
+    section {
+      display: flex;
+    }
+    
+    /* Navigācija */
+    nav {
+      flex: 1;
+      background: url('skola.jpg') repeat;
+      background-size: 100% auto;
+      padding: 20px;
+    }
+    
+    /* Navigācijas saturam */
+    nav h3 {
+      margin-top: 0;
+      color: white;
+    }
+    
+    nav ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+      color: white;
+    }
+    
+    nav ol li {
+      margin: 10px 0;
+    }
+    
+    nav ol li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    
+    /* Saturs */
+    article {
+      flex: 3;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    
+    /* Strukturējamās daļas stilizācija */
+    article section {
+      margin-bottom: 30px;
+    }
+    
+    article h2 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    
+    article table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    article table, article th, article td {
+      border: 1px solid #000;
+      padding: 5px;
+      text-align: left;
+    }
+    
+    article ol {
+      margin-left: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    
+    footer a img {
+      width: 100px;
+      height: auto;
+    }
+    
+    /* Responsive layout */
+    @media (max-width: 600px) {
+      section {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-
-
-
-
-<header>
-  <h2>Rīgas Valsts 1. ģimnāzija</h2>
-</header>
-
-<section>
-<nav>
-    <h2>Satura rādītājs</h2>
-    <ul>
-        <li><a href="#history">1. Vēsture</a></li>
-        <li><a href="#skolas-nosaukumu-mainas">2. Skolas nosaukumu maiņas</a></li>
-        <li><a href="#school-leaders">3. Zināmie skolas vadītāji (1229—1804)</a></li>
-        <li><a href="#Skolas absolventi">4. Skolas absolventi</a></li>
-    </ul>
-</nav>
-
   
-  <article>
-    <h1>RV1Ģ</h1>
-    <h1 id="history">Vēsture</h1>
-    <p>Rīgas Valsts 1. ģimnāzija (saīsinājumā RV1Ģ vai RV1.ģ) ir vispārējās pamata un vidējās izglītības iestāde Rīgā. Tā ir pilsētas senākā skola. Ģimnāzija specializējas matemātikas un valodu padziļinātā apgūšanā. Mācības šajā skolā notiek latviešu valodā. Kopš 1996. gada ģimnāzija piedalās Starptautiskā bakalaurāta mācību programmas realizācijas projektā. Skolai kā pirmajai Latvijā dibināta absolventu un draugu biedrība ar mērķi finansiāli atbalstīt skolu. Skolā darbojas jauniešu koris "Kamēr...". Kopš 2009. gada Draudzīgā aicinājuma fonda skolu reitingā un kopš 2013. gada Ata Kronvalda fonda Latvijas skolu reitingā Rīgas Valsts 1. ģimnāzija ieņem pirmo vietu ģimnāziju un lielo skolu grupā. Lai iegūtu vietu skolā, ir jāiztur matemātikas konkurss, kurā uz vienu vietu pretendē 8-10 skolēni. 9. klases noslēgumā skolēniem jāiztur vēl viens matemātikas konkurss, lai saglabātu vietu skolā. 2019. gadā konkursam uz 10. klasi pieteicās vairāk nekā tūkstoš Latvijas 9. klašu skolēnu.
-
-Skolas pastāvēšanai iespējams izsekot līdz pat 1211. gadam, kad bīskaps Alberts Rīgā nodibināja Svētās Marijas katedrāli un pie tās — Livonijas bīskapijas domkapitula klosteri. Kādā 1239. gada 19. aprīļa dokumentā minēts, ka domkapitula sholastiķis (mācību pārzinis) bijis kanoniķis Heinrihs, kas uzskatāms par pirmo zināmo Rīgas Doma klostera skolas vadītāju. Skola atradās Doma baznīcas krustejā un bija paredzēta katoļu garīdznieku sagatavošanai. Tās mācību programma atbilstoši viduslaiku latīņu skolu tradīcijai bija sadalīta triviuma ciklā — gramatika, retorika un dialektika. 1524. gadā luterāņu sarīkotajos baznīcu grautiņos katoļu Doma klostera skolu slēdza. 1528. gadā Rīgas rāte skolu no jauna atvēra kā laicīgu pilsētas otrās pakāpes skolu un par Domskolas pirmo rektoru iecēla Nīderlandes kalvinistu sludinātāju Jākobu Batusu (Jacobus Battus, miris 1546. gadā). Pēc viņa Domskolas rektori bija Retgers Pistorijs (no 1538) un Hermanis Vilkens (1554—1561), vēlākais Heidelbergas Universitātes rektors, kas savās publikācijās par burvestībām pieminējis Rīgas apkārtnes vilkačus. Skolā bija trīs klases, kurās mācīja klasiskās valodas, gatavojot tālākām studijām universitātēs. Zviedru Vidzemes laikā ar Zviedrijas karaļa Gustava II Ādolfa lēmumu 1631. gadā uz Doma skolas bāzes izveidoja Rīgas Akadēmisko ģimnāziju. Tajā bija trīs augstākās klases, kurās uzņēma pēc piecu klašu Domskolas beigšanas. Pirmie ģimnāzijas profesori bija Hermanis Samsons (ģimnāzijas inspektors), Johans Struborgs un Johans Hēfelns, vēlākie profesori bija Johans Brēvers (filozofija, vēsture, teoloģija), Johans Rihmanis (filozofija), Henings Vite (retorika un vēsture), Johans Pauls Mellers (jurisprudence un matemātika), kas ģimnāzijā izveidoja observatoriju ar diviem teleskopiem. Ģimnāzijā tika rīkoti publiski disputi un priekšlasījumi, kas saglabājušies līdz mūsu dienām. 1656. gadā ģimnāzijas ēka Otrā Ziemeļu kara laikā krievu bombardēšanas dēļ tika nopostīta, un 1675. gadā Zviedrijas karalis Kārlis XI nodibināja otru pilsētas ģimnāziju — Kārļa liceju (latīniski: Schola Carolina), kas atradās pie Sv. Jēkaba baznīcas. Rīgas Akadēmiskā ģimnāzija pie Rīgas Doma darbu atsāka 1678. gadā. Pēc Rīgas ieņemšanas Lielā Ziemeļu kara laikā 1711. gadā ģimnāzijas klases tika slēgtas, tomēr turpināja darboties Rīgas Domskola, kurā pakāpeniski atjaunojās klasiskās ģimnāzijas tradīcijas. Šajā periodā skolā strādāja vēlākais filozofs Johans Gotfrīds Herders (1764—1769) un rektora amatā bija ievērojamie apgaismības laikmeta darbinieki Karls Filips Mihaels Snells (1780—1787) un Kārlis Gotlobs Zontāgs (no 1788). 1787. gada 12. jūlijā pēc Krievijas ķeizarienes Katrīnas II rīkojuma tika svinīgi atklāta jaunā ģimnāzijas — Rīgas liceja — ēka Pils laukumā 2 (ēka celta 1785.—1787. gadā, arhitekts Matiass Šonss). 1804. gadā Vidzemes guberņas izglītības reformu laikā Domskolu pārveidoja par Rīgas apriņķa galveno mācību iestādi — Rīgas 1. apriņķa skolu, 1861. gadā — par Rīgas reālģimnāziju, kurā mācījās arī Vilhelms Ostvalds (1864—1871), bet 1873. gadā — par Rīgas Pilsētas ģimnāziju. Publiskai apskatei Rīgas pilsētas reālģimnāzijā 1869. gadā atklāja Rīgas pilsētas gleznu galeriju. 1874. gadā pēc Rīgas galvenā arhitekta Johana Daniela Felsko projekta tika uzcelta tagadējā skolas ēka Raiņa bulvārī 8. Rīgas pilsētas gleznu galerija 1879. gadā tika pārcelta uz netālo Kerkoviusa namu (tagad Kalpaka bulvārī 4). Vecā skolas ēka pie Doma baznicas tika nojaukta 1888. gadā, būvējot pilsētas muzeju. Šajā laikā skolā mācījušies Jānis Pliekšāns, Pēteris Stučka un citi vēlākie latviešu sabiedriskie darbinieki. Rusifikācijas periodā 1894. gadā skolu pārveidoja par klasisko ģimnāziju, vēlāk — par valsts ģimnāziju (Государственная гимназия) ar krievu mācību valodu. 1919. gadā Stučkas valdība pārdēvēja to par Rīgas 1. vidusskolu ar latviešu mācību valodu, Latvijas Republikas laikā tika atjaunota Rīgas pilsētas 1. ģimnāzija, kuras direktors ilgu laiku bija Jānis Stiprais (1922–1935), tad Jānis Lapiņš (1935—1939). Pēc Latvijas okupācijas skolu atkal pārdēvēja par Rīgas 1. vidusskolu un 1944. gadā nosauca tās pirmā direktora Leona Paegles vārdā. Pēc Latvijas Republikas atjaunošanas skola atguva Rīgas 1. ģimnāzijas vārdu, bet kopš 1996. gada tiek dēvēta par Rīgas Valsts 1. ģimnāziju. Meklējot datus par skolas vēsturi, jāņem vērā, ka laika posmā, kad skolu sauca par Rīgas pilsētas 1. ģimnāziju, pastāvēja arī Rīgas Valsts 1. ģimnāzija, kas nav saistīta ar šajā rakstā minēto skolu.
-
-Skolas nosaukumu maiņas
-    <h1 id="skolas-nosaukumu-mainas">Skolas nosaukumu maiņas</h1>
- <ul>
-        <li>1211.—1528. — Domkapitula klostera skola</li>
-        <li>1528.—1631. — Rīgas pilsētas Domskola</li>
-        <li>1631.—1710. — Rīgas Akadēmiskā ģimnāzija</li>
-        <li>1711.—1804. — Rīgas Domskola (klasiskā ģimnāzija)</li>
-        <li>1804.—1860. — Rīgas 1. apriņķa skola</li>
-        <li>1861.—1873. — Rīgas Reālģimnāzija</li>
-        <li>1873.—1894. — Rīgas Pilsētas ģimnāzija ar reālskolas un ģimnāzijas klasēm</li>
-        <li>1894.—1895. — 8 klašu klasiskā ģimnāzija</li>
-        <li>1896.—1919. — Valsts ģimnāzija</li>
-        <li>1919.—1920. — 1. vidusskola</li>
-        <li>1920.—1940. — Rīgas pilsētas 1. ģimnāzija</li>
-        <li>1940.—1944. — Rīgas 1. vidusskola</li>
-        <li>1944.—1990. — Ar Darba Sarkanā Karoga ordeni apbalvotā Rīgas L. Paegles 1. vidusskola</li>
-        <li>1990.—1996. — Rīgas 1. ģimnāzija</li>
-        <li>1996.—pašlaik — Rīgas Valsts 1. ģimnāzija</li>
-    </ul>
-        <h1 id="school-leaders">Zināmie skolas vadītāji (1229—1804)</h1>
-        <table border="1">
-        <tr>
+  <header>
+    <h2>Rīgas Valsts 1. ģimnāzija</h2>
+  </header>
+  
+  <section>
+    <nav>
+      <h3>Satura rādītājs</h3>
+      <ol>
+        <li><a href="#vesture">Vēsture</a></li>
+        <li><a href="#skolas-mainas">Skolas nosaukumu maiņas</a></li>
+        <li><a href="#vaditaji">Zināmie skolas vadītāji (1229—1804)</a></li>
+        <li><a href="#absolventi">Skolas absolventi</a></li>
+      </ol>
+    </nav>
+    
+    <article>
+      <!-- Vēsture sadaļa -->
+      <section id="vesture">
+        <h2>Vēsture</h2>
+        <p>
+          Rīgas Valsts 1. ģimnāzija (RV1Ģ vai RV1.ģ) ir Rīgas senākā skola, kas sniedz vispārējo pamata un vidējo izglītību. Skola specializējas matemātikas un valodu padziļinātā apgūšanā, un mācības tiek nodrošinātas latviešu valodā.
+        </p>
+        <p>
+          Kopš 1996. gada ģimnāzija piedalās Starptautiskā bakalaurāta programmā, un tajā ir dibināta absolventu un draugu biedrība, kas nodrošina finansiālu atbalstu. Skolā darbojas arī jauniešu koris "Kamēr..." un tiek organizēti matemātikas konkursi.
+        </p>
+      </section>
+      
+      <!-- Skolas nosaukumu maiņas sadaļa -->
+      <section id="skolas-mainas">
+        <h2>Skolas nosaukumu maiņas</h2>
+        <ol>
+          <li>1211.—1528. — Domkapitula klostera skola</li>
+          <li>1528.—1631. — Rīgas pilsētas Domskola</li>
+          <li>1631.—1710. — Rīgas Akadēmiskā ģimnāzija</li>
+          <li>1711.—1804. — Rīgas Domskola (klasiskā ģimnāzija)</li>
+          <li>1804.—1860. — Rīgas 1. apriņķa skola</li>
+          <li>1861.—1873. — Rīgas Reālģimnāzija</li>
+          <li>1873.—1894. — Rīgas Pilsētas ģimnāzija ar reālskolas un ģimnāzijas klasēm</li>
+          <li>1894.—1895. — 8 klašu klasiskā ģimnāzija</li>
+          <li>1896.—1919. — Valsts ģimnāzija</li>
+          <li>1919.—1920. — 1. vidusskola</li>
+          <li>1920.—1940. — Rīgas pilsētas 1. ģimnāzija</li>
+          <li>1940.—1944. — Rīgas 1. vidusskola</li>
+          <li>1944.—1990. — Ar Darba Sarkanā Karoga ordeni apbalvotā Rīgas L. Paegles 1. vidusskola</li>
+          <li>1990.—1996. — Rīgas 1. ģimnāzija</li>
+          <li>1996.—pašlaik — Rīgas Valsts 1. ģimnāzija</li>
+        </ol>
+      </section>
+      
+      <!-- Zināmie skolas vadītāji sadaļa -->
+      <section id="vaditaji">
+        <h2>Zināmie skolas vadītāji (1229—1804)</h2>
+        <table>
+          <tr>
             <th>Laiks</th>
             <th>Vadītājs</th>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>ap 1239.</td>
-            <td>mācību pārzinis (scholasticus) Domkapitula kanoniķis Heinrihs</td>
-        </tr>
-        <tr>
+            <td>Mācību pārzinis un Domkapitula kanoniķis Heinrihs</td>
+          </tr>
+          <tr>
             <td>1528.—1538.</td>
-            <td>rektors Jakobs Batuss (Jacobus Battus, miris 1546)</td>
-        </tr>
-        <tr>
+            <td>Rektors Jakobs Batuss (Jacobus Battus, miris 1546)</td>
+          </tr>
+          <tr>
             <td>no 1538.</td>
-            <td>rektors Retgers Pistorijs (Bekers)</td>
-        </tr>
-        <tr>
+            <td>Rektors Retgers Pistorijs (Bekers)</td>
+          </tr>
+          <tr>
             <td>1554.—1561.</td>
-            <td>rektors Hermanis Vilkens (Vilikinds, Vitekinds)</td>
-        </tr>
-        <tr>
+            <td>Rektors Hermanis Vilkens (Vilikinds, Vitekinds)</td>
+          </tr>
+          <tr>
             <td>ap 1576.</td>
-            <td>rektors Georgs Marsovs</td>
-        </tr>
-        <tr>
+            <td>Rektors Georgs Marsovs</td>
+          </tr>
+          <tr>
             <td>1579.—1589.</td>
-            <td>rektors Heinrihs Mellers</td>
-        </tr>
-        <tr>
+            <td>Rektors Heinrihs Mellers</td>
+          </tr>
+          <tr>
             <td>1589.—1596.</td>
-            <td>rektors un inspektors Johans Rīvijs</td>
-        </tr>
-        <tr>
+            <td>Rektors un inspektors Johans Rīvijs</td>
+          </tr>
+          <tr>
             <td>no 1631.</td>
-            <td>ģimnāzijas inspektors Hermanis Samsons</td>
-        </tr>
-        <tr>
+            <td>Ģimnāzijas inspektors Hermanis Samsons</td>
+          </tr>
+          <tr>
             <td>no 1669.</td>
-            <td>rektors Georgs Lauterbahs</td>
-        </tr>
-        <tr>
+            <td>Rektors Georgs Lauterbahs</td>
+          </tr>
+          <tr>
             <td>no 1681.</td>
-            <td>rektors Mihaels Pinsderfers (Pinsdörffer)</td>
-        </tr>
-        <tr>
+            <td>Rektors Mihaels Pinsderfers (Pinsdörffer)</td>
+          </tr>
+          <tr>
             <td>1755.—1765.</td>
-            <td>rektors un inspektors Johans Gothelfs Lindners</td>
-        </tr>
-        <tr>
+            <td>Rektors un inspektors Johans Gothelfs Lindners</td>
+          </tr>
+          <tr>
             <td>1765.—1780.</td>
-            <td>rektors Gotlībs Šlēgels</td>
-        </tr>
-        <tr>
+            <td>Rektors Gotlībs Šlēgels</td>
+          </tr>
+          <tr>
             <td>1780.—1787.</td>
-            <td>rektors Karls Filips Mihaels Snells</td>
-        </tr>
-        <tr>
+            <td>Rektors Karls Filips Mihaels Snells</td>
+          </tr>
+          <tr>
             <td>no 1788.</td>
-            <td>rektors Kārlis Gotlobs Zontāgs</td>
-        </tr>
-        <tr>
+            <td>Rektors Kārlis Gotlobs Zontāgs</td>
+          </tr>
+          <tr>
             <td>līdz 1804.</td>
-            <td>rektors Johans Augusts Albanuss</td>
-        </tr>
-    </table>
-    <h1 id="Skolas absolventi">Skolas absolventi</h1>
-    <p>Rainis, īstajā vārdā Jānis Pliekšāns, bija izcils latviešu dzejnieks, dramaturgs un politiķis, kurš ievērojami ietekmēja latviešu literatūru un kultūru. Viņš ir pazīstams ar saviem darbiem, kas veicināja latviskās identitātes stiprināšanu un nacionālās pašapziņas attīstību.
-    <a href="https://enciklopedija.lv/skirklis/55869-Rainis" target="_blank">Nacionālajā enciklopēdijā</a></p>
-  </article>
-</section>
-
-<footer>
-  <a href="https://www.r1g.edu.lv" target="_blank">
-    <img src="images/ll_13343785.jpg" alt="Clickable Image" width="50" height="50">
-</a>
-</footer>
-
+            <td>Rektors Johans Augusts Albanuss</td>
+          </tr>
+        </table>
+      </section>
+      
+      <!-- Skolas absolventi sadaļa -->
+      <section id="absolventi">
+        <h2>Skolas absolventi</h2>
+        <p>
+          Skolas absolvents Rainis ir viens no izcilākajiem Latvijas literatūras pārstāvjiem. Lai uzzinātu vairāk par viņa dzīvi un darbiem, apmeklē 
+          <a href="https://www.rainisliterature.com" target="_blank">šeit</a>.
+        </p>
+      </section>
+    </article>
+  </section>
+  
+  <footer>
+    <a href="http://www.rv1.lv">
+      <img src="skola.jpg" alt="Skolas logo">
+    </a>
+    <p>&copy; 2025 Rīgas Valsts 1. ģimnāzija</p>
+  </footer>
 </body>
 </html>
